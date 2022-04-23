@@ -5,13 +5,21 @@
 class ServerTlsMonitor < Formula
   desc "Reports tls certificate metrics"
   homepage "https://jmoney.dev/"
-  version "0.0.2"
+  version "0.0.3"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.0.2/server-tls-monitor_0.0.2_Darwin_arm64.tar.gz"
-      sha256 "5e30b8a395a0ba3bc386bf6f70488e33e54faa88f3182a7d010385f42d44327b"
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.0.3/server-tls-monitor_0.0.3_Darwin_arm64.tar.gz"
+      sha256 "3a137a1ac2a888c68c2387de424c9b387ac0e504db6c73f4d95deab1808eb203"
+
+      def install
+        bin.install "server-tls-monitor"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.0.3/server-tls-monitor_0.0.3_Darwin_x86_64.tar.gz"
+      sha256 "00a31d13d31348dbfc4a7dfa8ecffcb93c7c2ce00d8b2a5ae24a7755774a0fb4"
 
       def install
         bin.install "server-tls-monitor"
@@ -21,8 +29,16 @@ class ServerTlsMonitor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.0.2/server-tls-monitor_0.0.2_Linux_arm64.tar.gz"
-      sha256 "fe7b28d22839b34c18f009523dd3f8a19a889e85f1a07dbda2819126c7c2de69"
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.0.3/server-tls-monitor_0.0.3_Linux_arm64.tar.gz"
+      sha256 "8fe15d76caced43976e2f16f6895aedf7474ad34cb79d2c5c3c73e374ac0bf92"
+
+      def install
+        bin.install "server-tls-monitor"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.0.3/server-tls-monitor_0.0.3_Linux_x86_64.tar.gz"
+      sha256 "99d02577ccf85881eebf74c3d33000399612e5bf38d1e14f58dac3ce417d09cd"
 
       def install
         bin.install "server-tls-monitor"

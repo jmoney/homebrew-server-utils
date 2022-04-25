@@ -5,21 +5,21 @@
 class ServerTlsMonitor < Formula
   desc "Reports tls certificate metrics"
   homepage "https://jmoney.dev/server-tls-monitor"
-  version "0.1.11"
+  version "0.1.12"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.11/server-tls-monitor_0.1.11_Darwin_arm64.tar.gz"
-      sha256 "a31531255d23668d4d15f7871e950bc38fe53fe056ee47f79b195ba271d95d91"
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.12/server-tls-monitor_0.1.12_Darwin_arm64.tar.gz"
+      sha256 "e25fe5e65704ad6ee502d8e2bc8e256ce538e5ca65516562fb3a8d444fd8d9e6"
 
       def install
         bin.install "server-tls-monitor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.11/server-tls-monitor_0.1.11_Darwin_x86_64.tar.gz"
-      sha256 "5b1e382d324db82d2537b4798194efabc32cc9290394daada2a203e4a2c38221"
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.12/server-tls-monitor_0.1.12_Darwin_x86_64.tar.gz"
+      sha256 "84cafa57368bce6b67ac5eb8aac96fcaee7d45b38e711cf73d0dd2136265bb13"
 
       def install
         bin.install "server-tls-monitor"
@@ -28,17 +28,17 @@ class ServerTlsMonitor < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.11/server-tls-monitor_0.1.11_Linux_arm64.tar.gz"
-      sha256 "f59e47e06da09b4dcb572c7edc4a6cb05f130464816264656b3df05faf0eb3c2"
+    if Hardware::CPU.intel?
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.12/server-tls-monitor_0.1.12_Linux_x86_64.tar.gz"
+      sha256 "70fbab77b529901b11c9694ae74c668d003c3dd8b439775dea4ae857e89ca600"
 
       def install
         bin.install "server-tls-monitor"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.11/server-tls-monitor_0.1.11_Linux_x86_64.tar.gz"
-      sha256 "960531db62967e2cf7c43ba4dce198e5e62302c0470355c342e1499755be256b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jmoney/server-tls-monitor/releases/download/v0.1.12/server-tls-monitor_0.1.12_Linux_arm64.tar.gz"
+      sha256 "40ac87bd3b03abe5fb688b818330efcc81efb362ab61304c560268af73fdc6b6"
 
       def install
         bin.install "server-tls-monitor"

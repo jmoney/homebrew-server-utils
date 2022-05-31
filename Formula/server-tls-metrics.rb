@@ -5,21 +5,21 @@
 class ServerTlsMetrics < Formula
   desc "Reports tls certificate metrics"
   homepage "https://jmoney.dev/server-tls-metrics"
-  version "0.2.1"
+  version "0.3.1"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.2.1/server-tls-metrics_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "f3c2dabd00a790d0a313ec088ab9483aef9d6ec2f0a984d7e2e5b2159dc6acc9"
+    if Hardware::CPU.arm?
+      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.3.1/server-tls-metrics_0.3.1_Darwin_arm64.tar.gz"
+      sha256 "1a0a33b260790d095bfef8f0e052f15cdd2ef71ae7ace80e60bada22e8a1ad05"
 
       def install
         bin.install "server-tls-metrics"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.2.1/server-tls-metrics_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "7f83e21ae50f288f98a8c8a96af4518d2e0c8123875b853df21b8ee0fee5f95e"
+    if Hardware::CPU.intel?
+      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.3.1/server-tls-metrics_0.3.1_Darwin_x86_64.tar.gz"
+      sha256 "53bdb0f439b6ddea3aca67fe83e9b7c08270469afdaf0acb77519ee4636a645a"
 
       def install
         bin.install "server-tls-metrics"
@@ -29,16 +29,16 @@ class ServerTlsMetrics < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.2.1/server-tls-metrics_0.2.1_Linux_arm64.tar.gz"
-      sha256 "7246d835550fb199f28ecb63d48b281bb24fdc47d546e8c4c092bc829832bb3e"
+      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.3.1/server-tls-metrics_0.3.1_Linux_arm64.tar.gz"
+      sha256 "11ef29d304882e99996fb2fe47fa9f2e530ea95083322ed87a8dd2fc173dded0"
 
       def install
         bin.install "server-tls-metrics"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.2.1/server-tls-metrics_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "5c4da072db3b1440ab60e01e6a6506c7f2bf20e8ccd509a35351fb3586fec894"
+      url "https://github.com/jmoney/server-tls-metrics/releases/download/0.3.1/server-tls-metrics_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "999301d519664ea26369d52cb48edb25c3b24bf8d97399466cb405931da53707"
 
       def install
         bin.install "server-tls-metrics"

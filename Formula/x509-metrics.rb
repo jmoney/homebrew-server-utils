@@ -5,21 +5,21 @@
 class X509Metrics < Formula
   desc "Reports tls certificate metrics"
   homepage "https://jmoney.dev/x509-metrics"
-  version "1.0.0"
+  version "1.0.1"
   license "Apache 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.0/x509-metrics_1.0.0_darwin_arm64.tar.gz"
-      sha256 "5b0a23dc597fb035f69e40306fc20333de6d025bd77b7eba03e3f2781d3a4fdd"
+    if Hardware::CPU.intel?
+      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.1/x509-metrics_1.0.1_darwin_x86_64.tar.gz"
+      sha256 "099ae1bc0f9df272429f3b13d1de157d4fe39ddcf49667e8f73e116a36bd2ae0"
 
       def install
         bin.install "x509-metrics"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.0/x509-metrics_1.0.0_darwin_x86_64.tar.gz"
-      sha256 "d3c0e0283798bb454fdd703d7d0603f8b3e2e5982617803be428a3425adca268"
+    if Hardware::CPU.arm?
+      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.1/x509-metrics_1.0.1_darwin_arm64.tar.gz"
+      sha256 "50c9a8515f5498573a398827df5446bec939bcb1cb27af1bfb162c1d3eac0ac0"
 
       def install
         bin.install "x509-metrics"
@@ -28,17 +28,17 @@ class X509Metrics < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.0/x509-metrics_1.0.0_linux_arm64.tar.gz"
-      sha256 "ca03844968cffc9793ee3182c359670503ceba6c0dfddf6e07de9a870ed37605"
+    if Hardware::CPU.intel?
+      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.1/x509-metrics_1.0.1_linux_x86_64.tar.gz"
+      sha256 "58a86cda5ceb6c2e906bc76127795bca4e3544076cbc2b941b1581ad06fb18a9"
 
       def install
         bin.install "x509-metrics"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.0/x509-metrics_1.0.0_linux_x86_64.tar.gz"
-      sha256 "c82902d3592af05e0572133b3c75b57babb6d901ccf46d7d34d86f788040f948"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jmoney/x509-metrics/releases/download/1.0.1/x509-metrics_1.0.1_linux_arm64.tar.gz"
+      sha256 "78ae68a94f865eaa0152e037fea6086c2d02429576ea6231653c9f42b19be48a"
 
       def install
         bin.install "x509-metrics"

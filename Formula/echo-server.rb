@@ -5,21 +5,21 @@
 class EchoServer < Formula
   desc "Server that echos a request"
   homepage "https://jmoney.dev/echo-server"
-  version "0.2"
+  version "0.5"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jmoney/echo-server/releases/download/v0.2/echo-server_0.2_darwin_arm64.tar.gz"
-      sha256 "083a82f560327f0b6ae338dab0c2f532876e5d2bd1f255a836fc3b2f7a41f37f"
+      url "https://github.com/jmoney/echo-server/releases/download/v0.5/echo-server_0.5_darwin_arm64.tar.gz"
+      sha256 "591dda3ca3ea6e7ce2c3b3a1021889c5dcd2ed380425f234eedd0c7ecca4277b"
 
       def install
         bin.install "echo-server"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jmoney/echo-server/releases/download/v0.2/echo-server_0.2_darwin_amd64.tar.gz"
-      sha256 "f3a7d4e721752d07681227cb192333e43cef3acc1711dcf36f945bf2ec32a061"
+      url "https://github.com/jmoney/echo-server/releases/download/v0.5/echo-server_0.5_darwin_amd64.tar.gz"
+      sha256 "28c53eed4126de29037968a8f3dbec3c3c0ff27e63ce9a9bfa47ebcc3f19b3fa"
 
       def install
         bin.install "echo-server"
@@ -29,16 +29,16 @@ class EchoServer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmoney/echo-server/releases/download/v0.2/echo-server_0.2_linux_arm64.tar.gz"
-      sha256 "2edf6ee77f94bcab5ee678d6a91925d4ca0803a91c8a757dbc40ed27f8d664e7"
+      url "https://github.com/jmoney/echo-server/releases/download/v0.5/echo-server_0.5_linux_arm64.tar.gz"
+      sha256 "79d5d8e756d5dc354864ccb039acd5cbf8e4e5e9b85e51b43dd395ddd7fbfd4d"
 
       def install
         bin.install "echo-server"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jmoney/echo-server/releases/download/v0.2/echo-server_0.2_linux_amd64.tar.gz"
-      sha256 "43aa9162b281217f9f92ab477561b36180bc54cc1d2eb8d1fb0447b620ef43d0"
+      url "https://github.com/jmoney/echo-server/releases/download/v0.5/echo-server_0.5_linux_amd64.tar.gz"
+      sha256 "e52054c1379c574653d679139a356935bf0d23ca8f04b89f94894dbcdb639960"
 
       def install
         bin.install "echo-server"

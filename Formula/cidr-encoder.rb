@@ -5,13 +5,13 @@
 class CidrEncoder < Formula
   desc "CLI for time efficiently encoding cidr blocks to find if an IP exists in a range"
   homepage "https://jmoney.dev/cidr-encoder"
-  version "0.1"
+  version "0.2"
   license "Apache 2.0"
   depends_on :macos
 
   on_arm do
-    url "https://github.com/jmoney/cidr-encoder/releases/download/v0.1/tokenizer_cli_0.1_darwin_arm64.tar.gz"
-    sha256 "188e2dc2f9a7e9c637d468ad84d659a28d77f54960aa6400a6144f76ce00a683"
+    url "https://github.com/jmoney/cidr-encoder/releases/download/v0.2/tokenizer_cli_0.2_darwin_arm64.tar.gz"
+    sha256 "739efec5dcc1633e28060a1667068eecb387e3d74080b428d30e5550ac3e1814"
 
     def install
       bin.install "cidr-encoder"
